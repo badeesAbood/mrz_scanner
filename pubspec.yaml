@@ -1,6 +1,6 @@
 name: mrz_scanner
 description: A highly customizable, on-device Machine Readable Zone (MRZ) hardware scanner for Flutter, powered by Google ML Kit. Scans passports effortlessly.
-version: 0.0.1
+version: 0.0.2
 homepage:
 repository: https://github.com/badeesAbood/mrz_scanner
 
