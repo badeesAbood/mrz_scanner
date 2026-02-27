@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/mrz_data.dart';
-import 'mrz_scanner.dart';
-import 'mrz_scanner_overlay.dart';
+import 'mrz_sc.dart';
+import 'mrz_sc_overlay.dart';
 
 /// A ready-to-use, fullscreen passport scanner page.
 ///

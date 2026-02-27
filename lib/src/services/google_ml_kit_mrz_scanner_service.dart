@@ -1,7 +1,7 @@
 import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
-import 'package:mrz_scanner/src/models/mrz_data.dart';
-import 'package:mrz_scanner/src/services/i_mrz_scanner_service.dart';
-import 'package:mrz_scanner/src/utils/mrz_parser.dart';
+import 'package:mrz_sc/src/models/mrz_data.dart';
+import 'package:mrz_sc/src/services/i_mrz_sc_service.dart';
+import 'package:mrz_sc/src/utils/mrz_parser.dart';
 
 /// A concrete implementation of [IMrzScannerService] using Google ML Kit.
 ///

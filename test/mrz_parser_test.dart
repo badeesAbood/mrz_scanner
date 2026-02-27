@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mrz_scanner/src/utils/mrz_parser.dart';
+import 'package:mrz_sc/src/utils/mrz_parser.dart';
 
 void main() {
   group('MrzParser', () {

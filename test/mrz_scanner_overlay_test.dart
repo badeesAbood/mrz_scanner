@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mrz_scanner/src/ui/mrz_scanner_overlay.dart';
+import 'package:mrz_sc/src/ui/mrz_sc_overlay.dart';
 
 void main() {
   group('MrzScannerOverlay Widget Tests', () {

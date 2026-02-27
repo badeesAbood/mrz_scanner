@@ -32,7 +32,7 @@ Ensure your `android/app/build.gradle` has a minimum SDK version of at least `21
 For a drop-in solution, use `PassportScannerPage`:
 
 ```dart
-import 'package:mrz_scanner/mrz_scanner.dart';
+import 'package:mrz_sc/mrz_sc.dart';
 
 void startScan(BuildContext context) async {
   final MrzData? result = await Navigator.push(
@@ -58,7 +58,7 @@ void startScan(BuildContext context) async {
 If you want to build your own custom interface (e.g., adding specific buttons, different overlay shapes, or embedding it as a smaller widget inside another page instead of fullscreen), compose the `MrzScanner` component yourself:
 
 ```dart
-import 'package:mrz_scanner/mrz_scanner.dart';
+import 'package:mrz_sc/mrz_sc.dart';
 
 class MyCustomScanner extends StatelessWidget {
   @override

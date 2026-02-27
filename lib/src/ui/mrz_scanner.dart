@@ -3,8 +3,8 @@ import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mlkit_commons/google_mlkit_commons.dart';
 import '../models/mrz_data.dart';
-import '../services/google_ml_kit_mrz_scanner_service.dart';
-import '../services/i_mrz_scanner_service.dart';
+import '../services/google_ml_kit_mrz_sc_service.dart';
+import '../services/i_mrz_sc_service.dart';
 
 /// Builder function for creating the scanner UI overlay.
 typedef MrzOverlayBuilder =
