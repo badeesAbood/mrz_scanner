@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/mrz_data.dart';
+import '../services/i_mrz_sc_service.dart';
 import 'mrz_sc.dart';
 import 'mrz_sc_overlay.dart';
 
@@ -8,6 +9,9 @@ import 'mrz_sc_overlay.dart';
 /// It combines the [MrzScanner] camera logic and the [MrzScannerOverlay]
 /// cutout into a simple Scaffold that returns the [MrzData] upon success.
 class PassportScannerPage extends StatefulWidget {
+  /// The engine used to parse the camera frame (e.g. Google ML Kit, TFLite).
+  final IMrzScannerService scannerService;
+
   /// The text displayed when the camera is active, asking the user to align the passport.
   final String alignPassportText;
 
@@ -20,6 +24,7 @@ class PassportScannerPage extends StatefulWidget {
   /// Creates a ready-to-use passport scanner page.
   const PassportScannerPage({
     super.key,
+    required this.scannerService,
     this.alignPassportText = 'Align passport MRZ within the box',
     this.passportDetectedText = 'Passport Detected!',
     this.processingErrorText = 'Processing Error',
@@ -66,6 +71,7 @@ class _PassportScannerPageState extends State<PassportScannerPage> {
     return Scaffold(
       backgroundColor: Colors.black,
       body: MrzScanner(
+        scannerService: widget.scannerService,
         onSuccess: _onSuccess,
         onError: _onError,
         builder: (context, isDetecting) {

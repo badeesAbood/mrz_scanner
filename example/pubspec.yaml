@@ -36,6 +36,8 @@ dependencies:
   cupertino_icons: ^1.0.8
   mrz_sc:
     path: ..
+  mrz_sc_mlkit:
+    path: ../packages/mrz_sc_mlkit
 
 dev_dependencies:
   flutter_test:

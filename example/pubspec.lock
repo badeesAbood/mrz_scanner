@@ -222,7 +222,14 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.0.2"
+    version: "0.0.1"
+  mrz_sc_mlkit:
+    dependency: "direct main"
+    description:
+      path: "../packages/mrz_sc_mlkit"
+      relative: true
+    source: path
+    version: "0.0.1"
   path:
     dependency: transitive
     description:
