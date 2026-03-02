@@ -1,18 +1,57 @@
 # mrz_sc_mlkit
 
-A new Flutter plugin project.
+An official extension package for `mrz_sc` that utilizes **Google ML Kit** for fast, 100% offline, on-device MRZ (Machine Readable Zone) parsing.
 
-## Getting Started
+By decoupling the engine from the UI, `mrz_sc` keeps your app's base bundle size small. When you need highly accurate passport scanning, simply drop in this package!
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/to/develop-plugins),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+## Installation
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Add both the core package and this extension to your `pubspec.yaml`:
 
-The plugin project was generated without specifying the `--platforms` flag, no platforms are currently supported.
-To add platforms, run `flutter create -t plugin --platforms <platforms> .` in this directory.
-You can also find a detailed instruction on how to add platforms in the `pubspec.yaml` at https://flutter.dev/to/pubspec-plugin-platforms.
+```yaml
+dependencies:
+  mrz_sc: ^1.0.1
+  mrz_sc_mlkit: ^1.0.0
+```
+
+## Setup Requirements
+
+Since this library uses the camera and ML Kit:
+
+**iOS:**
+Add to your `Info.plist`:
+```xml
+<key>NSCameraUsageDescription</key>
+<string>This app needs access to the camera to scan passport MRZ elements.</string>
+```
+
+**Android:**
+Ensure your `app/build.gradle` `minSdkVersion` is at least `21`.
+Google ML Kit models are downloaded automatically by Google Play Services, meaning the library won't bloat your app size.
+
+## Usage
+
+Simply instantiate the `GoogleMlKitMrzScannerService` and pass it to the UI components provided by the core `mrz_sc` package.
+
+```dart
+import 'package:mrz_sc/mrz_sc.dart';
+import 'package:mrz_sc_mlkit/mrz_sc_mlkit.dart';
+
+void startScan(BuildContext context) async {
+  final MrzData? result = await Navigator.push(
+    context,
+    MaterialPageRoute(
+      builder: (context) => PassportScannerPage(
+        // Inject the ML Kit Engine!
+        scannerService: GoogleMlKitMrzScannerService(),
+        
+        alignPassportText: 'Align passport MRZ within the box',
+      ),
+    ),
+  );
+
+  if (result != null) {
+    print('Scanned MRZ: ${result.documentNumber}');
+  }
+}
+```

@@ -1,7 +1,10 @@
-## 0.0.1
+## 1.0.1
 
-* Initial release.
-* Added `MrzScanner` headless widget for custom composed UI.
-* Added `MrzScannerOverlay` for standard ID-3 passport bounding boxes.
-* Added `PassportScannerPage` for a quick, full-screen drop-in setup.
-* Integrated `google_mlkit_text_recognition` for on-device parsing.
+* Updated documentation and `README.md` to properly explain the new federated architecture pattern, decouple engine injections, and explain how to import `mrz_sc_mlkit`.
+
+## 1.0.0
+
+* Initial Release of the `mrz_sc` federated MRZ Scanner package.
+* Added `IMrzScannerService` boundary interface for decoupling.
+* Added standard `MrzData` unified parsing model.
+* Added UI overlay and bounding boxes logic for scanning.

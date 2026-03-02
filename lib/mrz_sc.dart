@@ -7,3 +7,4 @@ export 'src/services/i_nfc_passport_reader.dart';
 export 'src/ui/passport_scanner_page.dart';
 export 'src/ui/mrz_sc_overlay.dart';
 export 'src/ui/mrz_sc.dart';
+export 'src/utils/mrz_parser.dart';

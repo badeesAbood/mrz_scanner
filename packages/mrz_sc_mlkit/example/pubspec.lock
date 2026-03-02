@@ -242,17 +242,18 @@ packages:
   mrz_sc:
     dependency: transitive
     description:
-      path: "../../.."
-      relative: true
-    source: path
-    version: "0.0.1"
+      name: mrz_sc
+      sha256: ec0bb3fabe4c87d55255e403581a98a8fcbae0f258b7a509b13719bcb62ef7cc
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.1"
   mrz_sc_mlkit:
     dependency: "direct main"
     description:
       path: ".."
       relative: true
     source: path
-    version: "0.0.1"
+    version: "1.0.0"
   path:
     dependency: transitive
     description:

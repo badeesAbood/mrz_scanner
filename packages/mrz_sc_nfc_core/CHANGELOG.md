@@ -1,3 +1,4 @@
-## 0.0.1
+## 1.0.0
 
-* TODO: Describe initial release.
+* Initial structure of the `mrz_sc_nfc_core` extension package.
+* Added `DmrtdNfcPassportReader` capable of interfacing with standard MRZ data.

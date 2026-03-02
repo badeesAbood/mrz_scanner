@@ -1,3 +1,4 @@
-## 0.0.1
+## 1.0.0
 
-* TODO: Describe initial release.
+* Initial Release of the `mrz_sc_mlkit` extension package.
+* Added `GoogleMlKitMrzScannerService` implementing `IMrzScannerService`.

@@ -1,9 +1,8 @@
-import 'dart:typed_data';
 import 'package:flutter/services.dart';
 import 'package:logging/logging.dart';
 
 // We import the ComProvider interface from dmrtd
-import 'package:dmrtd/src/com/com_provider.dart';
+import 'package:dmrtd/dmrtd.dart';
 
 class NativeNfcProvider extends ComProvider {
   static final _log = Logger('mrz_sc_nfc_core.provider');

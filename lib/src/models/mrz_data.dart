@@ -1,5 +1,8 @@
 import 'package:equatable/equatable.dart';
 
+/// A unified data model representing the parsed information extracted from a Machine Readable Zone (MRZ).
+///
+/// This class holds standard passport details such as document number, names, nationality, and dates.
 class MrzData extends Equatable {
   final String documentType;
   final String countryCode;

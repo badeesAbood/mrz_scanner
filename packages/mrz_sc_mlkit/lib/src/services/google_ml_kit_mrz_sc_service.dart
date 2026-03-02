@@ -4,13 +4,12 @@ import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
 import 'package:mrz_sc/mrz_sc.dart';
-import 'package:mrz_sc/src/utils/mrz_parser.dart';
 
-/// A concrete implementation of [IMrzScannerService] using Google ML Kit.
+/// An implementation of [IMrzScannerService] that uses Google's ML Kit
+/// Text Recognition v2 engine to process and extract MRZ data.
 ///
-/// This service uses the local, on-device `TextRecognizer` to extract raw text
-/// from camera frames or image files, and parses the text searching for a valid
-/// 2-line Machine Readable Zone (MRZ) formatted according to ICAO Document 9303 (TD3).
+/// This service requires Google Play Services on Android but operates
+/// 100% locally on-device.
 class GoogleMlKitMrzScannerService implements IMrzScannerService {
   final TextRecognizer _textRecognizer = TextRecognizer(
     script: TextRecognitionScript.latin,
@@ -98,7 +97,7 @@ class GoogleMlKitMrzScannerService implements IMrzScannerService {
     );
   }
 
-  /// Optional: dispose method if we ever want to close the recognizer manually
+  /// Closes the underlying ML Kit TextRecognizer to release memory resources.
   void dispose() {
     _textRecognizer.close();
   }

@@ -1,20 +1,19 @@
 name: mrz_sc_mlkit
-description: "A new Flutter plugin project."
-version: 0.0.1
-homepage:
-publish_to: 'none'
+description: An extension for the mrz_sc package that utilizes Google ML Kit Text Recognition for on-device parsing.
+version: 1.0.0
+homepage: https://github.com/badeesAbood/mrz_sc_mlkit
+repository: https://github.com/badeesAbood/mrz_sc_mlkit
 
 environment:
   sdk: ^3.10.0
-  flutter: '>=3.3.0'
+  flutter: ">=1.20.0"
 
 dependencies:
   flutter:
     sdk: flutter
+  camera: ^0.12.0
   google_mlkit_text_recognition: ^0.15.1
-  mrz_sc:
-    path: ../../
-
+  mrz_sc: ^1.0.1
 dev_dependencies:
   flutter_test:
     sdk: flutter
